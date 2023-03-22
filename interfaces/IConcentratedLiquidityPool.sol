@@ -55,6 +55,8 @@ interface IConcentratedLiquidityPoolStruct {
         uint256 amountOut;
         uint256 totalAmount;
         uint256 limitOrderFeeGrowth;
+        uint256 token0LimitOrderFee;
+        uint256 token1LimitOrderFee;
     }
 
     struct SwapCacheLocal {

@@ -44,18 +44,21 @@ interface ILimitOrderStruct {
 
     struct LimitOrder {
         IConcentratedLiquidityPool pool;
-        uint256 id;
         int24 tick;
-        uint256 sqrtpriceX96;
+        LimitOrderStatus status;
         bool zeroForOne;
         uint128 amountIn;
         uint128 amountOut;
-        uint256 claimedAmount;
-        LimitOrderStatus status;
-        uint256 claimableGrowth0;
-        uint256 claimableGrowth1;
         uint128 chargeAmount;
         uint128 rebateAmount;
+        // uint128 forwarderRebateAmount;
+        uint256 id;
+        uint256 sqrtpriceX96;
+        uint256 claimedAmount;
+        uint256 claimableGrowth0;
+        uint256 claimableGrowth1;
+
+        // address forwarder;
     }
 }
 
